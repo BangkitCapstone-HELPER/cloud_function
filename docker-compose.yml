@@ -1,12 +1,8 @@
-version: '2'
+version: '3.4'
+
 services:
-    web:
-        build: .
-        ports:
-            - "5000:5000"
-        volumes:
-            - .:/code
-        depends_on:
-            - redis
-    redis:
-        image: redis
+  serantau:
+    image: serantau
+    build:
+      context: .
+      dockerfile: ./Dockerfile
