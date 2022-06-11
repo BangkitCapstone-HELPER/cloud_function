@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  app:
+    container_name: flask
+    tty: true
+    build: .
+    ports:
+      - 80:8080
+    volumes:
+            - '.:/app'
+    restart: on-failure
